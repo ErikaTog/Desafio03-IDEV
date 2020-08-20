@@ -97,3 +97,20 @@ update(
   'B',
   'Android'
 );
+
+// 5-Excluir usuário por id;
+let destroy = (id) => {
+  let index = students.findIndex((student) => student.id == id);
+
+  if (index === -1) {
+    console.log('Estudante inexistente. Não foi possível excluir.');
+  } else {
+    console.log(
+      `Estudante ${students[index].nome} com id ${students[index].id}, excluído com sucesso!`
+    );
+    students.splice(index, 1);
+    console.table(students);
+  }
+};
+
+destroy(1);
