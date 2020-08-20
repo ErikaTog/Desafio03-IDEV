@@ -11,7 +11,7 @@ let id = 1;
 let create = (email, senha, admin=false) => {
     let resp = "";
 
-    if(!email || !senha || !admin){
+    if(!email || !senha){
         resp ="Por favor, preencha todos os campos!"
     }else{
         let newId = id
@@ -25,11 +25,11 @@ let create = (email, senha, admin=false) => {
     return resp        
 }
 
-    console.log(create("gui@", 123456, true ))
+    console.log(create("gui@", 123456, true))
     console.log(create("kinha@", 123456, true ))
     console.log(create("lilica@", 123456, true ))
 
-    // console.log(users)
+    console.log(users)
     
    
 
@@ -38,17 +38,17 @@ let index = () => console.table(users);
 index()
 
 
-3-Buscar um usuário por id;
+// 3-Buscar um usuário por id;
 let findByPk = (id) => {
     
    let findUserId = users.find((user) => {
         return user.id == id
     })
   
-        if(findUserId.length == 0){
-            console.log("Id não localizado.")
-        }else{
+        if(findUserId){
             console.table(findUserId)
+        }else{
+            console.log("Id não localizado.")
        }     
 }
 findByPk(3)
@@ -57,42 +57,41 @@ findByPk(3)
 // 4-Login onde verifica se email e senha informadas estão corretas com algum usuário da lista
 // deve retornar uma mensagem de "usuario conectado" ou "usuário ou senha incorreto";
     
-    let login = (email, senha) => {
-        const userEmail = users.find(user => user.email == email);
-        const userIndex = users.indexOf(userEmail);
-        if(userEmail){
-            const userPassword = users[userIndex].senha == senha
-            if(userPassword){
-                console.log(`Usuário ${email} conectado!`)
-            }else{
-                console.log("Usuário ou senha incorreto.")
-            }            
-        }else{
-            console.log("Usuário ou senha incorreto.")
-        }
-    }
+    // let login = (email, senha) => {
+    //     const userEmail = users.find(user => user.email == email);
+    //     const userIndex = users.indexOf(userEmail);
+    //     if(userEmail){
+    //         const userPassword = users[userIndex].senha == senha
+    //         if(userPassword){
+    //             console.log(`Usuário ${email} conectado!`)
+    //         }else{
+    //             console.log("Usuário ou senha incorreto.")
+    //         }            
+    //     }else{
+    //         console.log("Usuário ou senha incorreto.")
+    //     }
+    // }
 
-    login('kinha@', 12345)
+    // login('kinha@', 12345)
 
 
 
 
 // 5-Excluir usuário por id; 
-	let destroy = (id) => {
-        let index = users.findIndex(user => user.id == id)
-        console.log(index)
+	// let destroy = (id) => {
+    //     let index = users.findIndex(user => user.id == id)
 
-        if(index === -1){
-            console.log("Usuário inexistente. Não foi possível excluir.")
-        }else{
-            console.log(`Usuário ${users[index].nome} com id ${users[index].id}, excluído com sucesso!`)
-            users.splice(index, 1)
-            console.table(users)
-        }        
-    }
+    //     if(index === -1){
+    //         console.log("Usuário inexistente. Não foi possível excluir.")
+    //     }else{
+    //         console.log(`Usuário ${users[index].nome} com id ${users[index].id}, excluído com sucesso!`)
+    //         users.splice(index, 1)
+    //         console.table(users)
+    //     }        
+    // }
 
-    destroy(3)
+    // destroy(3)
 
-    console.log(create("murilo@", 123456, true )) // verificando se ao excluir o 3 (acima) ele ia criar agora o 4 ou o 3. Criou o 4 \o/
+    // console.log(create("murilo@", 123456, true )) // verificando se ao excluir o 3 (acima) ele ia criar agora o 4 ou o 3. Criou o 4 \o/
     
  
