@@ -31,33 +31,33 @@ Arquivo 1:
 Todos são obrigatórios;
 
 No arquivo users.js crie as seguintes funções
-- Salvar um novo usuário; 
+✔ Salvar um novo usuário; @done(20-08-20 18:22)
 ✔ Listar usuários em formato de tabela; 
-- Buscar um usuário por id e/ou email;
-- Login onde verifica se email e senha informadas estão corretas com algum usuário da lista
+✔ Buscar um usuário por id e/ou email; @done(20-08-20 18:23)
+✔ Login onde verifica se email e senha informadas estão corretas com algum usuário da lista @done(20-08-20 18:24)
 deve retornar uma mensagem de "usuario conectado" ou "usuário ou senha incorreto";
-- Excluir usuário por id; 
+✔ Excluir usuário por id; @done(20-08-20 18:24)
 
 Arquivo 2:
 ✔ Crie um arquivo chamado "students.js";
-- Neste crie uma constante chamada "students";
-- Essa constante deve armazenar uma lista de alunos;
-- Cada aluno deve ter os seguintes atributos 
-- id, (number)
-- nome, (string)
-- gênero, (string)
-- data de nascimento, (date)
-- turma, (string)
-- curso, (string)
+✔ Neste crie uma constante chamada "students"; @done(20-08-20 18:27)
+✔ Essa constante deve armazenar uma lista de alunos; @done(20-08-20 18:27)
+✔ Cada aluno deve ter os seguintes atributos @done(20-08-20 18:30)
+✔ id, (number) @done(20-08-20 18:30)
+✔ nome, (string) @done(20-08-20 18:30)
+✔ gênero, (string) @done(20-08-20 18:30)
+✔ data de nascimento, (date) @done(20-08-20 18:30)
+✔ turma, (string) @done(20-08-20 18:30)
+✔ curso, (string) @done(20-08-20 18:30)
 Dos atributos apenas curso é opcional;
 
 No arquivo students.js crie as seguintes funções
-☐ Salvar novo aluno;
-- Listar alunos em formato de tabela;
-- Buscar um aluno por nome e/ou id; 
-- Editar os dados de um aluno específico;
-- Excluir um aluno por id;
-☐ Suba o projeto para o github
+✔ Salvar novo aluno; @done(20-08-20 19:31)
+✔ Listar alunos em formato de tabela; @done(20-08-20 19:31)
+✔ Buscar um aluno por nome e/ou id; @done(20-08-20 20:12)
+✔ Editar os dados de um aluno específico; @done(20-08-20 20:36)
+✔ Excluir um aluno por id; @done(20-08-20 20:39)
+✔ Suba o projeto para o github @done(20-08-20 20:44)
 
 
 Observação:
