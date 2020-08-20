@@ -65,3 +65,35 @@ let findByPk = (id) => {
   }
 };
 findByPk(2);
+
+// 4 - Editar os dados de um aluno específico
+
+let update = (id, nome, genero, dataDeNascimento, turma, curso = '') => {
+  let student = students.find((student) => student.id === id);
+
+  if (!student) return 'Estudante não encontrado';
+
+  const index = students.indexOf(student);
+
+  if (!nome || !genero || !dataDeNascimento || !turma)
+    return 'Por favor, preencha todos os campos!';
+
+  student = {
+    id,
+    nome,
+    genero,
+    dataDeNascimento,
+    turma,
+    curso,
+  };
+  students.splice(index, 1, student);
+};
+
+update(
+  1,
+  'Rogerinho',
+  'Masculino',
+  'Sat Nov 29 1997 19:39:13 GMT-0300 (Brasilia Standard Time)',
+  'B',
+  'Android'
+);
