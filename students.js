@@ -47,3 +47,7 @@ console.log(
     'Full Stack'
   )
 );
+
+// 2-Listar estudantes em formato de tabela;
+let index = () => console.table(students);
+index();
