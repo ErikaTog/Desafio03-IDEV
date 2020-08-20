@@ -51,3 +51,17 @@ console.log(
 // 2-Listar estudantes em formato de tabela;
 let index = () => console.table(students);
 index();
+
+// // 3-Buscar um usuário por id;
+let findByPk = (id) => {
+  let findStudentById = students.find((student) => {
+    return student.id == id;
+  });
+
+  if (findStudentById) {
+    console.table(findStudentById);
+  } else {
+    console.log('Id não localizado.');
+  }
+};
+findByPk(2);
